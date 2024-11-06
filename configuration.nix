@@ -17,8 +17,10 @@ in {
   programs.zsh.enable = true;
 
   nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
-    channel.enable = true;
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 
   # Enable SSH
@@ -54,6 +56,7 @@ in {
     sops
     home-manager
     openssl
+    tmux
     dig
   ];
 
