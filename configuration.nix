@@ -2,7 +2,7 @@
 
 let
   # Load secrets from the decrypted JSON file
-  secrets = builtins.fromJSON (builtins.readFile ./secrets.decrypted.json);
+  secrets = builtins.fromJSON (builtins.readFile /home/cory/github.com/twittyc/twitty-codes/secrets.decrypted.json);
   domain = "cory.twitty.codes";
 
 in {
