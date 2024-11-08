@@ -14,6 +14,7 @@ in {
 
   programs.vim.defaultEditor = true;
   programs.vim.enable = true;
+  programs.zsh.enable = true;
 
   nix = {
     package =  pkgs.nixVersions.latest;
